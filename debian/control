@@ -1,15 +1,18 @@
 Source: vdirsyncer
-Maintainer: Filip Pytloun <filip@pytloun.cz>
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Uploaders: Filip Pytloun <filip@pytloun.cz>
 Section: utils
 Priority: optional
 Build-Depends: debhelper (>= 9),
                dh-python,
                python3-all,
-               python3-click,
+               python3-atomicwrites (>= 0.1.7),
+               python3-click (>= 5.0),
+               python3-click-log (>= 0.1.3),
                python3-click-plugins,
                python3-lxml,
-               python3-requests,
-               python3-requests-toolbelt,
+               python3-requests (>=2.4.1, !=2.9.0),
+               python3-requests-toolbelt (>= 0.4.0),
                python3-setuptools,
                python3-sphinx
 Standards-Version: 3.9.8
@@ -20,12 +23,7 @@ Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/vdirsyncer.git
 
 Package: vdirsyncer
 Architecture: all
-Depends: python3-click,
-         python3-click-plugins,
-         python3-lxml,
-         python3-requests,
-         python3-requests-toolbelt,
-         ${misc:Depends},
+Depends: ${misc:Depends},
          ${python3:Depends}
 Description: Synchronize calendars and contacts
  Vdirsyncer synchronizes your calendars and addressbooks between two storages.
