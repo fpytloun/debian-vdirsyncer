@@ -1,0 +1,22 @@
+Source: vdirsyncer
+Maintainer: Filip Pytloun <filip@pytloun.cz>
+Section: python
+Priority: optional
+Build-Depends: python-setuptools (>= 0.6b3), python-all (>= 2.6.6-3),
+ debhelper(>= 9), dh-python, python-sphinx, python-requests,
+ python-requests-toolbelt, python-click, python-click-plugins, python-lxml
+Standards-Version: 3.9.6
+Homepage: https://github.com/untitaker/vdirsyncer
+
+Package: vdirsyncer
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends},
+ python-requests, python-lxml, python-requests-toolbelt, python-click,
+ python-click-plugins
+Description: Synchronize calendars and contacts
+ Vdirsyncer synchronizes your calendars and addressbooks between two storages.
+ The most popular purpose is to synchronize a CalDAV/CardDAV server with a local
+ folder or file. The local data can then be accessed via a variety of programs,
+ none of which have to know or worry about syncing to a server.
+ .
+ It aims to be for CalDAV and CardDAV what OfflineIMAP is for IMAP.

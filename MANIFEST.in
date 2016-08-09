@@ -1,0 +1,17 @@
+include AUTHORS.rst
+include CHANGELOG.rst
+include LICENSE
+include config.example
+include Makefile
+include test-requirements.txt
+include docs-requirements.txt
+
+recursive-include docs *
+recursive-include tests *
+recursive-include contrib *
+prune tests/storage/servers
+recursive-include tests/storage/servers/radicale *
+recursive-include tests/storage/servers/skip *
+
+prune docs/_build
+global-exclude *.py[cdo] __pycache__ *.so *.pyd

@@ -1,0 +1,15 @@
+*.pyc
+__pycache__
+htmlcov
+.coverage
+build
+env
+*.egg-info
+.cache
+.eggs
+.egg
+.xprocess
+dist
+docs/_build/
+vdirsyncer/version.py
+.hypothesis

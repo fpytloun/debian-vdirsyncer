@@ -1,0 +1,5 @@
+vdirsyncer (0.8.0-1) unstable; urgency=low
+
+  * initial release, Closes: #745027
+
+ -- Filip Pytloun <filip@pytloun.cz>  Thu, 27 Aug 2015 09:39:53 +0200
