@@ -1,18 +1,32 @@
 Source: vdirsyncer
 Maintainer: Filip Pytloun <filip@pytloun.cz>
-Section: python
+Section: utils
 Priority: optional
-Build-Depends: python-setuptools (>= 0.6b3), python-all (>= 2.6.6-3),
- debhelper(>= 9), dh-python, python-sphinx, python-requests,
- python-requests-toolbelt, python-click, python-click-plugins, python-lxml
-Standards-Version: 3.9.6
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python3-all,
+               python3-click,
+               python3-click-plugins,
+               python3-lxml,
+               python3-requests,
+               python3-requests-toolbelt,
+               python3-setuptools,
+               python3-sphinx
+Standards-Version: 3.9.8
+Testsuite: autopkgtest-pkg-python
 Homepage: https://github.com/untitaker/vdirsyncer
+Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/vdirsyncer.git/
+Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/vdirsyncer.git
 
 Package: vdirsyncer
 Architecture: all
-Depends: ${misc:Depends}, ${python:Depends},
- python-requests, python-lxml, python-requests-toolbelt, python-click,
- python-click-plugins
+Depends: python3-click,
+         python3-click-plugins,
+         python3-lxml,
+         python3-requests,
+         python3-requests-toolbelt,
+         ${misc:Depends},
+         ${python3:Depends}
 Description: Synchronize calendars and contacts
  Vdirsyncer synchronizes your calendars and addressbooks between two storages.
  The most popular purpose is to synchronize a CalDAV/CardDAV server with a local
