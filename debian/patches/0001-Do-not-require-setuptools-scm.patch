@@ -1,3 +1,4 @@
+From d2e21fb6fbd7900cb02540ec9fa9e48f91079ce1 Mon Sep 17 00:00:00 2001
 From: Filip Pytloun <filip@pytloun.cz>
 Date: Fri, 29 Jan 2016 16:24:42 +0100
 Subject: Do not require setuptools-scm
@@ -7,10 +8,10 @@ Subject: Do not require setuptools-scm
  1 file changed, 4 deletions(-)
 
 diff --git a/setup.py b/setup.py
-index f721e18..f5989d3 100644
+index 18e6e8e..713d786 100644
 --- a/setup.py
 +++ b/setup.py
-@@ -17,10 +17,6 @@ from setuptools import find_packages, setup
+@@ -54,10 +54,6 @@ class PrintRequirements(Command):
  
  setup(
      name='vdirsyncer',
@@ -20,4 +21,4 @@ index f721e18..f5989d3 100644
 -    setup_requires=['setuptools_scm'],
      author='Markus Unterwaditzer',
      author_email='markus@unterwaditzer.net',
-     url='https://github.com/untitaker/vdirsyncer',
+     url='https://github.com/pimutils/vdirsyncer',
