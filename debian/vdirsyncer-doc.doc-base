@@ -1,0 +1,9 @@
+Document: vdirsyncer-doc
+Title: Vdirsyncer Documentation
+Author: Markus Unterwaditzer
+Abstract: Sphinx documentation for Vdirsyncer
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/vdirsyncer-doc/html/index.html
+Files: /usr/share/doc/vdirsyncer-doc/html/*
