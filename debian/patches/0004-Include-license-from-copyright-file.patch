@@ -1,0 +1,19 @@
+From de5c8e94741bcb0ee30441eb3f4ed95cfb409d22 Mon Sep 17 00:00:00 2001
+From: Filip Pytloun <filip@pytloun.cz>
+Date: Thu, 11 Aug 2016 14:35:29 +0200
+Subject: Include license from copyright file
+
+---
+ docs/license.rst | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/docs/license.rst b/docs/license.rst
+index a9bbc81..1df0f2f 100644
+--- a/docs/license.rst
++++ b/docs/license.rst
+@@ -7,4 +7,4 @@ Credits and License
+ License
+ =======
+ 
+-.. include:: ../LICENSE
++.. literalinclude:: /usr/share/doc/vdirsyncer-doc/copyright
