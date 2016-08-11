@@ -15,6 +15,8 @@ override_dh_sphinxdoc:
 ifeq (,$(findstring nodocs, $(DEB_BUILD_OPTIONS)))
 	PYTHONPATH=. sphinx-build -b html docs $(CURDIR)/debian/vdirsyncer-doc/usr/share/doc/vdirsyncer-doc/html
 	dh_sphinxdoc -O--buildsystem=python_distutils
+	# Remove unwanted license file, we already reference d/copyright
+	rm -f $(CURDIR)/debian/vdirsyncer-doc/usr/share/doc/vdirsyncer-doc/html/_sources/license.txt
 endif
 
 override_dh_auto_test:
