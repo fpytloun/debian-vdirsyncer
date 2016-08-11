@@ -1,20 +1,39 @@
-From c96fe5055641fadfcaaad8f3ac26bef1f2634480 Mon Sep 17 00:00:00 2001
+From d2e9fa249ba6c08be070a506167da2760d3e9534 Mon Sep 17 00:00:00 2001
 From: Filip Pytloun <filip@pytloun.cz>
 Date: Thu, 11 Aug 2016 14:19:03 +0200
 Subject: Don't use subtest
 
 ---
- tests/cli/test_sync.py | 85 --------------------------------------------------
- 1 file changed, 85 deletions(-)
+ tests/cli/test_sync.py | 105 -------------------------------------------------
+ 1 file changed, 105 deletions(-)
 
 diff --git a/tests/cli/test_sync.py b/tests/cli/test_sync.py
-index a93951d..47db452 100644
+index a93951d..6251ea8 100644
 --- a/tests/cli/test_sync.py
 +++ b/tests/cli/test_sync.py
-@@ -291,91 +291,6 @@ def test_multiple_pairs(tmpdir, runner):
- def test_create_collections(subtest, collections):
-     collections = set(to_native(x, 'utf-8') for x in collections)
+@@ -272,111 +272,6 @@ def test_multiple_pairs(tmpdir, runner):
+     assert not result.exception
  
+ 
+-@given(collections=st.sets(
+-    st.text(
+-        st.characters(
+-            blacklist_characters=set(
+-                u'./\x00'  # Invalid chars on POSIX filesystems
+-                + (u';' if PY2 else u'')  # https://bugs.python.org/issue16374
+-            ),
+-            # Surrogates can't be encoded to utf-8 in Python
+-            blacklist_categories=set(['Cs'])
+-        ),
+-        min_size=1,
+-        max_size=50
+-    ),
+-    min_size=1
+-))
+-@example(collections=[u'persönlich'])
+-def test_create_collections(subtest, collections):
+-    collections = set(to_native(x, 'utf-8') for x in collections)
+-
 -    @subtest
 -    def test_inner(tmpdir, runner):
 -        runner.write_with_general(dedent('''
@@ -100,6 +119,7 @@ index a93951d..47db452 100644
 -        'three.txt' in result.output,
 -    ]) == [False, True, True]
 -
- 
+-
  @pytest.mark.parametrize('existing,missing', [
      ('foo', 'bar'),
+     ('bar', 'foo'),

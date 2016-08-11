@@ -272,26 +272,6 @@ def test_multiple_pairs(tmpdir, runner):
     assert not result.exception
 
 
-@given(collections=st.sets(
-    st.text(
-        st.characters(
-            blacklist_characters=set(
-                u'./\x00'  # Invalid chars on POSIX filesystems
-                + (u';' if PY2 else u'')  # https://bugs.python.org/issue16374
-            ),
-            # Surrogates can't be encoded to utf-8 in Python
-            blacklist_categories=set(['Cs'])
-        ),
-        min_size=1,
-        max_size=50
-    ),
-    min_size=1
-))
-@example(collections=[u'persönlich'])
-def test_create_collections(subtest, collections):
-    collections = set(to_native(x, 'utf-8') for x in collections)
-
-
 @pytest.mark.parametrize('existing,missing', [
     ('foo', 'bar'),
     ('bar', 'foo'),

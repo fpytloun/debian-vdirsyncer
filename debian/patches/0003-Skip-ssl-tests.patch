@@ -1,4 +1,4 @@
-From 6d177bc6ac6885eb1845c62f4db47800de615823 Mon Sep 17 00:00:00 2001
+From b24d9e61a8a7b1f4cbc6ff4ebc91df6766090603 Mon Sep 17 00:00:00 2001
 From: Filip Pytloun <filip@pytloun.cz>
 Date: Thu, 11 Aug 2016 14:20:36 +0200
 Subject: Skip ssl tests
