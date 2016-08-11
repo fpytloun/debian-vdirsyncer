@@ -1,1 +1,3 @@
 0001-Do-not-require-setuptools-scm.patch
+0002-Don-t-use-subtest.patch
+0003-Skip-ssl-tests.patch
