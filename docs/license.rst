@@ -7,4 +7,4 @@ Credits and License
 License
 =======
 
-.. include:: ../LICENSE
+.. literalinclude:: /usr/share/doc/vdirsyncer-doc/copyright
