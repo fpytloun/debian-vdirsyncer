@@ -31,6 +31,7 @@ def test_get_storage_init_args():
     assert not required
 
 
+@pytest.mark.skip(reason="See TODO.Debian")
 def test_request_ssl(httpsserver):
     httpsserver.serve_content('')  # we need to serve something
 
@@ -50,6 +51,7 @@ def _fingerprints_broken():
     return broken_urllib3 and not tolerant_python
 
 
+@pytest.mark.skip(reason="See TODO.Debian")
 @pytest.mark.skipif(_fingerprints_broken(),
                     reason='https://github.com/shazow/urllib3/issues/529')
 @pytest.mark.parametrize('fingerprint', [
