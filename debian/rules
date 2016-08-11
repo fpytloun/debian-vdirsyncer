@@ -4,7 +4,7 @@ VER ?= $(shell dpkg-parsechangelog -SVersion)
 
 export PYBUILD_NAME=vdirsyncer
 %:
-	dh $@ --with python3 --buildsystem=pybuild
+	dh $@ --with python3,sphinxdoc --buildsystem=pybuild
 
 override_dh_auto_build:
 	echo "version = '$(VER)'" > vdirsyncer/version.py

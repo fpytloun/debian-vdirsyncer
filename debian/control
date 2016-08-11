@@ -39,7 +39,7 @@ Description: Synchronize calendars and contacts
 Package: vdirsyncer-doc
 Section: doc
 Architecture: all
-Depends: ${misc:Depends}, ${python3:Depends}
+Depends: ${misc:Depends}, ${sphinxdoc:Depends}
 Description: Synchronize calendars and contacts - documentation
  Vdirsyncer synchronizes your calendars and addressbooks between two storages.
  The most popular purpose is to synchronize a CalDAV/CardDAV server with a local
