@@ -17,6 +17,15 @@ ifeq (,$(findstring nodocs, $(DEB_BUILD_OPTIONS)))
 	dh_sphinxdoc -O--buildsystem=python_distutils
 endif
 
+override_dh_auto_test:
+	LC_ALL=C.UTF-8 \
+	DETERMINISTIC_TESTS=false \
+	CI=false \
+	REMOTESTORAGE_SERVER=skip \
+	DAV_SERVER=skip \
+	RADICALE_BACNEND=filesystem \
+	dh_auto_test
+
 override_dh_auto_clean:
 	rm -f vdirsyncer/version.py
 	dh_auto_clean

@@ -1,0 +1,14 @@
+
+Failing tests
+-------------
+
+Following tests are failing and are disabled for now:
+
+tests/cli/test_sync.py
+
+    fixture 'subtest' not found
+    would require to package pytest-subtesthack
+
+tests/utils/test_main.py test_request_ssl*
+
+    requests.exceptions.ProxyError: HTTPSConnectionPool(host='127.0.0.1', port=46025): Max retries exceeded with url: / (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f8ca8d2bc18>: Failed to establish a new connection: [Errno 111] Connection refused',)))
