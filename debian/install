@@ -1,0 +1,2 @@
+#! /usr/bin/dh-exec --with=install
+config.example => /usr/share/doc/vdirsyncer/examples/config

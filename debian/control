@@ -4,6 +4,7 @@ Uploaders: Filip Pytloun <filip@pytloun.cz>
 Section: utils
 Priority: optional
 Build-Depends: debhelper (>= 9),
+               dh-exec,
                dh-python (>= 2.20160609~),
                python3-all,
                python3-atomicwrites (>= 0.1.7),
