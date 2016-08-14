@@ -1,7 +1,5 @@
 #!/usr/bin/make -f
 
-VER ?= $(shell dpkg-parsechangelog -SVersion)
-
 export PYBUILD_DESTDIR_python3=debian/vdirsyncer
 export PYBUILD_NAME=vdirsyncer
 %:
@@ -27,6 +25,3 @@ override_dh_auto_test:
 	DAV_SERVER=skip \
 	RADICALE_BACNEND=filesystem \
 	dh_auto_test
-
-override_dh_auto_clean:
-	dh_auto_clean
