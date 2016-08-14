@@ -3,7 +3,7 @@ Upstream-Name: vdirsyncer
 Source: https://github.com/untitaker/vdirsyncer
 
 Files: *
-Copyright: 2014-2015 Markus Unterwaditzer
+Copyright: (c) 2014-2016 Markus Unterwaditzer & contributors
 License: Expat
 
 Files: debian/*
