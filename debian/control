@@ -23,8 +23,8 @@ Build-Depends: debhelper (>= 9),
 Standards-Version: 3.9.8
 Testsuite: autopkgtest-pkg-python
 Homepage: https://github.com/untitaker/vdirsyncer
-Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/vdirsyncer.git/
-Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/vdirsyncer.git
+Vcs-Svn: svn://anonscm.debian.org/python-apps/packages/vdirsyncer/trunk/
+Vcs-Browser: https://anonscm.debian.org/viewvc/python-apps/packages/vdirsyncer/trunk/
 
 Package: vdirsyncer
 Architecture: all
