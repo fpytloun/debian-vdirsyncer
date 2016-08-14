@@ -54,6 +54,10 @@ class PrintRequirements(Command):
 
 setup(
     name='vdirsyncer',
+    use_scm_version={
+        'write_to': 'vdirsyncer/version.py',
+    },
+    setup_requires=['setuptools_scm'],
     author='Markus Unterwaditzer',
     author_email='markus@unterwaditzer.net',
     url='https://github.com/pimutils/vdirsyncer',

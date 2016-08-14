@@ -1,4 +1,4 @@
-From d2e9fa249ba6c08be070a506167da2760d3e9534 Mon Sep 17 00:00:00 2001
+From 5e13f4e543683f242fe5c8d8aeda8f0512a657bb Mon Sep 17 00:00:00 2001
 From: Filip Pytloun <filip@pytloun.cz>
 Date: Thu, 11 Aug 2016 14:19:03 +0200
 Subject: Don't use subtest

@@ -1,4 +1,2 @@
-0001-Do-not-require-setuptools-scm.patch
-0002-Don-t-use-subtest.patch
-0003-Skip-ssl-tests.patch
-0004-Include-license-from-copyright-file.patch
+0001-Don-t-use-subtest.patch
+0002-Include-license-from-copyright-file.patch
