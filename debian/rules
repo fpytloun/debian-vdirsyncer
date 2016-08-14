@@ -8,7 +8,6 @@ export PYBUILD_NAME=vdirsyncer
 	dh $@ --with python3,sphinxdoc --buildsystem=pybuild
 
 override_dh_auto_build:
-	echo "version = '$(VER)'" > vdirsyncer/version.py
 	dh_auto_build
 	PYTHONPATH=$(CURDIR) make -C docs man
 
@@ -30,5 +29,4 @@ override_dh_auto_test:
 	dh_auto_test
 
 override_dh_auto_clean:
-	rm -f vdirsyncer/version.py
 	dh_auto_clean
