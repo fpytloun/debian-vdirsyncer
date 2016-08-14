@@ -26,8 +26,6 @@ override_dh_auto_test:
 	REMOTESTORAGE_SERVER=skip \
 	DAV_SERVER=skip \
 	RADICALE_BACNEND=filesystem \
-	HTTP_PROXY="" \
-	HTTPS_PROXY="" \
 	dh_auto_test
 
 override_dh_auto_clean:
