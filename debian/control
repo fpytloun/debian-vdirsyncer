@@ -29,6 +29,7 @@ Vcs-Browser: https://anonscm.debian.org/viewvc/python-apps/packages/vdirsyncer/t
 Package: vdirsyncer
 Architecture: all
 Depends: ${misc:Depends}, ${python3:Depends}
+Suggests: python3-requests-oauthlib
 Description: Synchronize calendars and contacts
  Vdirsyncer synchronizes your calendars and addressbooks between two storages.
  The most popular purpose is to synchronize a CalDAV/CardDAV server with a local
